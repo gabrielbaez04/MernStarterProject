@@ -42,5 +42,7 @@ We use npm scripts and [Webpack][] as our build system. Run the following comman
 
 > npm start
 
+This project is part of the book Full-Stack React Projects by Shama Hoque.
+
 [Node.js]( https://nodejs.org/)
 [Webpack](https://webpack.github.io/)
