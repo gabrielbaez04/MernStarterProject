@@ -2,11 +2,7 @@
   "name": "mernstarterproject",
   "version": "1.0.0",
   "description": "Base application for developing different MERN applications.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "development": "nodemon"
-  },
+  "main": "./dist/server.generated.js",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/gabrielbaez04/MernStarterProject.git"
@@ -23,6 +19,15 @@
     "url": "https://github.com/gabrielbaez04/MernStarterProject/issues"
   },
   "homepage": "https://github.com/gabrielbaez04/MernStarterProject#readme",
+  "scripts": {
+    "development": "nodemon",
+    "build": "webpack --config webpack.config.client.production.js && webpack --mode=production --config webpack.config.server.js",
+    "start": "NODE_ENV=production node ./dist/server.generated.js"
+  },
+  "engines": {
+    "node": "8.11.1",
+    "npm": "5.8.0"
+  },
   "devDependencies": {
     "babel-core": "^6.26.2",
     "babel-loader": "^7.1.4",
